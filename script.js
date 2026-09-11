@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Open modal when clicking on images
         clickableImages.forEach(img => {
             img.addEventListener('click', () => {
-                modalImage.src = img.src;
+                modalImage.src = img.currentSrc || img.src;
                 modalImage.alt = img.alt;
                 imageModal.classList.add('active');
                 document.body.style.overflow = 'hidden'; // Prevent background scrolling

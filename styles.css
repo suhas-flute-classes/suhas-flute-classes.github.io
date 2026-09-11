@@ -406,6 +406,7 @@ body {
 .about-text { font-size: 18px; line-height: 1.75; }
 .about-text h2 { font-size: 28px; margin-top: 0; color: var(--brand); }
 .teacher-photo-in-about { display: flex; justify-content: center; }
+.teacher-photo-in-about picture { display: flex; justify-content: center; width: 100%; }
 .teacher-photo-in-about img {
     width: 80%;
     max-width: 480px;
@@ -459,6 +460,7 @@ body {
 
 .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 @media (max-width: 700px) { .gallery { grid-template-columns: 1fr; } }
+.gallery picture { display: block; }
 .gallery img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--gold); }
 
 .video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
