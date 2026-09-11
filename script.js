@@ -1,19 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Loading screen functionality
-    const loadingScreen = document.getElementById('loadingScreen');
     const scrollToTopBtn = document.querySelector('.scroll-to-top');
-    
-    // Hide loading screen after page loads
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            if (loadingScreen) {
-                loadingScreen.classList.add('hidden');
-                setTimeout(() => {
-                    loadingScreen.style.display = 'none';
-                }, 500);
-            }
-        }, 700); // Show loading for at least 1 second
-    });
 
     // Scroll to top functionality
     if (scrollToTopBtn) {
@@ -150,12 +136,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // (no default dial-code text prefilled)
     }
 
-    // Basic client-side email validation on submit
+    // Email is optional; only validate it when something was entered
     const form = document.querySelector('form.contact-form');
     if (form) {
         form.addEventListener('submit', (e) => {
             const email = document.getElementById('email');
-            if (email && !/^\S+@\S+\.\S+$/.test(email.value)) {
+            const emailValue = email ? email.value.trim() : '';
+            if (emailValue && !/^\S+@\S+\.\S+$/.test(emailValue)) {
                 e.preventDefault();
                 alert('Please enter a valid email address.');
                 email.focus();
