@@ -395,6 +395,12 @@ body {
     line-height: 1.6;
     animation: fadeInUp 0.8s ease 0.4s both;
 }
+.hero .hero-lang {
+    margin: -18px 0 30px;
+    font-size: clamp(16px, 1.8vw, 20px);
+    color: var(--brand-strong);
+    animation: fadeInUp 0.8s ease 0.5s both;
+}
 .hero .actions {
     display: flex;
     flex-wrap: wrap;
